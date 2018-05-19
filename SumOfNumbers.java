@@ -1,23 +1,31 @@
 public class SumOfNumbers {
 
     public static void main(String[] args){
+        isOdd(7);
+        sumOdd(3, 1000);
+    }
 
-        int count = 0;
+    public static boolean isOdd(int number) {
+        if (number < 0) {
+            return false;
+        } else if (number % 2 != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static int sumOdd(int start, int end) {
         int sum = 0;
-
-        for(int i = 1; i <= 1000; i++){
-            if((i % 3 == 0) && (i % 5 == 0)){
-                count++;
+        if (start % 2 != 0) {
+            for (int i ==start;
+            i<end ;
+            i += 2){
                 sum += i;
-                System.out.println(i + " is divisible by 3 and 5");
-
-                if(count == 5){
-                    System.out.println("exiting for loop");
-                    break;
-                }
+                break;
             }
         }
-        System.out.println("sum is " + sum);
     }
+    return sum;
 
 }
